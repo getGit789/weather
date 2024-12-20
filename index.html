@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Enter city name">
+                <button class="refresh-btn">GO</button>
+            </div>
+            <div class="unit-toggle">
+                <button class="active">°C</button>
+                <button>°F</button>
+            </div>
+        </header>
+
+        <div class="weather-info">
+            <div class="weather-icon"></div>
+            <div class="temperature">--°C</div>
+            <div class="date"></div>
+            <div class="weather-desc"></div>
+            <div class="rain-chance"></div>
+            <div class="location">
+                <span>Enter a city to get weather information</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="tabs">
+                <button class="tab active">Today</button>
+                <button class="tab">Week</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Today's Content -->
+                <div id="today-content" class="highlights">
+                    <h2>Today's Highlights</h2>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <h3>UV Index</h3>
+                            <div class="uv-meter">
+                                <div class="value">--</div>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <h3>Wind Status</h3>
+                            <div class="wind-status">
+                                <div class="value">--</div>
+                                <div class="unit">km/h</div>
+                                <div class="direction">--</div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h3>Sunrise & Sunset</h3>
+                            <div class="sun-times">
+                                <div class="sunrise">↑
+                                    <span>--:-- AM</span>
+                                </div>
+                                <div class="sunset">↓
+                                    <span>--:-- PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h3>Humidity</h3>
+                            <div class="humidity">
+                                <div class="value">--%</div>
+                                <div class="status">--</div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h3>Visibility</h3>
+                            <div class="visibility">
+                                <div class="value">--</div>
+                                <div class="unit">km</div>
+                                <div class="status">--</div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h3>Air Quality</h3>
+                            <div class="air-quality">
+                                <div class="value">--</div>
+                                <div class="status">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week's Content -->
+                <div id="week-content" class="weekly-forecast" style="display: none">
+                    <!-- Weekly forecast will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
